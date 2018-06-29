@@ -1,0 +1,51 @@
+﻿<Window x:Class="UserLayer.Windows.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserLayer.Windows"
+        xmlns:xc="clr-namespace:UserLayer.Helper"
+        xc:DialogCloser.DialogResult="{Binding DialogResult}"
+
+    xmlns:model="clr-namespace:UserLayer.ViewModels"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="310" Width="240">
+
+    <Window.DataContext>
+        <model:PersonViewModel/>
+    </Window.DataContext>
+  
+    <StackPanel Margin="10">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Type:"  />
+            <TextBox x:Name="txtType" Width="100"  Text="{Binding SelectedType,UpdateSourceTrigger=PropertyChanged}"  Height="20" Margin="53,10,0,0"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Identifier:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtIdentifier" Width="100" IsEnabled="False" Text="{Binding Identifier}"  Height="20" Margin="30,10,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Name:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtName" Width="100" Height="20" Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" Margin="45,10,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Surname:" Margin="0,10,0,0" />
+            <TextBox Name="txtSurname" Width="100" Text="{Binding Surname,UpdateSourceTrigger=PropertyChanged}" Height="20" Margin="30,10,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="lblYear" Content="YearStudy:"  Margin="0,10,0,0" />
+            <TextBox x:Name="txtYearStudy" Text="{Binding YearStudy,UpdateSourceTrigger=PropertyChanged}" Width="100"  Height="20" Margin="25,10,0,0"/>
+        </StackPanel>
+        <StackPanel  Orientation="Horizontal">
+            <Label x:Name="lblGrade"  Content="Grade:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtGrade" Text="{Binding Grade,UpdateSourceTrigger=PropertyChanged}" Width="100"   Height="20" Margin="45,10,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="saveBtn" Content="Save" Command="{Binding Path=SaveCommand}"  Width="60" Height="19" Margin="15"/>
+            <Button x:Name="cancelBtn"  Content="Cancel" IsCancel="True"  Width="60" Height="20" Margin="15" />
+        </StackPanel>
+
+
+    </StackPanel>
+</Window>

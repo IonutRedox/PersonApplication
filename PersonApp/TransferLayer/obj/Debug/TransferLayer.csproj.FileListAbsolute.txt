@@ -1,0 +1,16 @@
+c:\users\ici\source\repos\Person Application\TransferLayer\bin\Debug\TransferLayer.dll
+c:\users\ici\source\repos\Person Application\TransferLayer\bin\Debug\TransferLayer.pdb
+c:\users\ici\source\repos\Person Application\TransferLayer\obj\Debug\TransferLayer.csprojResolveAssemblyReference.cache
+c:\users\ici\source\repos\Person Application\TransferLayer\obj\Debug\TransferLayer.csproj.CoreCompileInputs.cache
+c:\users\ici\source\repos\Person Application\TransferLayer\obj\Debug\TransferLayer.dll
+c:\users\ici\source\repos\Person Application\TransferLayer\obj\Debug\TransferLayer.pdb
+C:\Users\Redox\Desktop\Person Application\TransferLayer\bin\Debug\TransferLayer.dll
+C:\Users\Redox\Desktop\Person Application\TransferLayer\bin\Debug\TransferLayer.pdb
+C:\Users\Redox\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.dll
+C:\Users\Redox\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.pdb
+C:\Users\ICI\Desktop\Person Application\TransferLayer\bin\Debug\TransferLayer.dll
+C:\Users\ICI\Desktop\Person Application\TransferLayer\bin\Debug\TransferLayer.pdb
+C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.csproj.CoreCompileInputs.cache
+C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.dll
+C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.pdb
+C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,54 @@
+﻿<Window x:Class="UserLayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:model="clr-namespace:UserLayer.ViewModels"
+        xmlns:local="clr-namespace:UserLayer"
+        xmlns:type="clr-namespace:UserLayer.Helper"
+        mc:Ignorable="d"
+        Title="Person App" Height="310" Width="530">
+    <Window.Resources>
+        <type:TypeConverter x:Key="TypeConverter"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <model:MainViewModel/>
+    </Window.DataContext>
+    <StackPanel>
+        
+        <DataGrid AutoGenerateColumns="False" SelectedItem="{Binding SelectedPerson,Mode=TwoWay}" ItemsSource="{Binding Persons}" CanUserResizeColumns="False" CanUserResizeRows="False" Height="150" HorizontalAlignment="Center" Margin="47,30,46.6,0" Name="DataGridPerson" VerticalAlignment="Top" Width="400">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Identifier}" Header="Identifier" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Surname}" Header="Surname" Width="*"/>
+                <DataGridTextColumn  Header="Detail" Width="*">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource TypeConverter}">
+                            <Binding Path="YearStudy"/>
+                            <Binding Path="Grade"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Margin="100,10,100,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="0,0,10,0" Command="{Binding Path=AddCommand}" Content="Add" Grid.Column="0"/>
+            <Button Margin="0,0,10,0" Command="{Binding Path=EditCommand}" Content="Edit" Grid.Column="1"/>
+            <Button Content="Delete" Command="{Binding Path=DeleteCommand}" Grid.Column="2"/>
+        </Grid>
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <Label Content="Search:" FontSize="15" Margin="58,0,0,0"/>
+            <TextBox   Name="txtSearch" Text="{Binding SearchedPerson,UpdateSourceTrigger=PropertyChanged}"  Width="100" Height="20" >
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding Path=SearchCommand}" Key="Enter" />
+                </TextBox.InputBindings>
+            </TextBox>
+        </StackPanel>
+    </StackPanel>
+
+</Window>
