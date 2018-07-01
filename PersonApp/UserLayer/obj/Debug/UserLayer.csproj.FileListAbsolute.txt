@@ -45,3 +45,26 @@ C:\Users\ICI\Desktop\Person Application\UserLayer\bin\Debug\BusinessLayer.pdb
 C:\Users\Redox\Desktop\Person Application\UserLayer\bin\Debug\BusinessLayer.dll
 C:\Users\Redox\Desktop\Person Application\UserLayer\bin\Debug\BusinessLayer.pdb
 C:\Users\Redox\Desktop\Person Application\UserLayer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\UserLayer.exe.config
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer.exe
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer.pdb
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer.csprojResolveAssemblyReference.cache
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\Windows\EditWindow.g.cs
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\Windows\MainWindow.g.cs
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\App.g.cs
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer_MarkupCompile.cache
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer_MarkupCompile.lref
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\UserLayer.exe
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\UserLayer.pdb
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\BusinessLayer.dll
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\DataLayer.dll
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\TransferLayer.dll
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\BusinessLayer.pdb
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\DataLayer.pdb
+D:\Git\PersonApplication\PersonApp\UserLayer\bin\Debug\TransferLayer.pdb
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\Windows\EditWindow.baml
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\Windows\MainWindow.baml
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer.g.resources
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer.Properties.Resources.resources
+D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\UserLayer.csproj.GenerateResource.Cache

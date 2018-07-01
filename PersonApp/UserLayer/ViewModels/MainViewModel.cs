@@ -14,15 +14,11 @@ using UserLayer.Helper;
 
 namespace UserLayer.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged 
+    public class MainViewModel: INotifyPropertyChanged 
     {
         public MainViewModel()
-        {
-            var temp = PersonManage.GetPersons();
-            foreach (Person anonim in temp)
-            {
-                Persons.Add(anonim);
-            }
+        { 
+            Persons = new ObservableCollection<Person>(PersonManage.GetPersons());
             _addCommand = new RelayCommand(AddWindow_Execute, () => true);
             _editCommand = new RelayCommand(EditWindow_Execute, Command_CanExecute);
             _deleteCommand = new RelayCommand(DeleteCommand_Execute, Command_CanExecute);
@@ -44,8 +40,8 @@ namespace UserLayer.ViewModels
             }
         }
         public static bool IsFocused { get; set; }
-        static private ObservableCollection<Person> _persons = new ObservableCollection<Person>();
-        static public ObservableCollection<Person> Persons
+        private static ObservableCollection<Person> _persons = new ObservableCollection<Person>();
+         public static ObservableCollection<Person> Persons
         {
             get { return _persons; }
             set { _persons = value; }
