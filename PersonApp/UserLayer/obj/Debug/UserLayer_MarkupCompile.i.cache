@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Git\PersonApplication\PersonApp\UserLayer\obj\Debug\
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\UserLayer\obj\Debug\
 UserLayer
 none
 false
 DEBUG;TRACE
-D:\Git\PersonApplication\PersonApp\UserLayer\App.xaml
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\UserLayer\App.xaml
 21393953754
 
-15353088507
-161205674099
+16-281812361
+161750075819
 Windows\EditWindow.xaml;Windows\MainWindow.xaml;
 
-False
+True
 

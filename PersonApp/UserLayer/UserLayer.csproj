@@ -78,6 +78,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Helper\ColorConverter.cs" />
     <Compile Include="Helper\DialogCloser.cs" />
     <Compile Include="Helper\TypeConverter.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

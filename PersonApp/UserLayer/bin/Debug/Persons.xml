@@ -1,15 +1,45 @@
 <?xml version="1.0"?>
 <ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Person xsi:type="Student">
-    <Name>Ionut</Name>
-    <Surname>Alin</Surname>
-    <Identifier>403</Identifier>
-    <YearStudy>4</YearStudy>
+    <Name>Mihai</Name>
+    <Surname>Andrei</Surname>
+    <Identifier>997</Identifier>
+    <YearStudy>3</YearStudy>
+  </Person>
+  <Person xsi:type="Teacher">
+    <Name>Alex</Name>
+    <Surname>Adrian</Surname>
+    <Identifier>111</Identifier>
+    <Grade>School</Grade>
   </Person>
   <Person xsi:type="Student">
-    <Name>Alin</Name>
-    <Surname>Mihai</Surname>
-    <Identifier>306</Identifier>
-    <YearStudy>4</YearStudy>
+    <Name>Roxana</Name>
+    <Surname>Maria</Surname>
+    <Identifier>331</Identifier>
+    <YearStudy>2</YearStudy>
+  </Person>
+  <Person xsi:type="Student">
+    <Name>Vasile</Name>
+    <Surname>Macedon</Surname>
+    <Identifier>772</Identifier>
+    <YearStudy>1</YearStudy>
+  </Person>
+  <Person xsi:type="Teacher">
+    <Name>Viorel</Name>
+    <Surname>Marasoiu</Surname>
+    <Identifier>232</Identifier>
+    <Grade>College</Grade>
+  </Person>
+  <Person xsi:type="Teacher">
+    <Name>Andrei</Name>
+    <Surname>Mureseanu</Surname>
+    <Identifier>656</Identifier>
+    <Grade>School</Grade>
+  </Person>
+  <Person xsi:type="Student">
+    <Name>Mihaila</Name>
+    <Surname>Alexandra</Surname>
+    <Identifier>352</Identifier>
+    <YearStudy>2</YearStudy>
   </Person>
 </ArrayOfPerson>

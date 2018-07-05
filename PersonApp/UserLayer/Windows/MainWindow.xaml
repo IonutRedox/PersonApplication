@@ -10,24 +10,38 @@
         Title="Person App" Height="310" Width="530">
     <Window.Resources>
         <type:TypeConverter x:Key="TypeConverter"/>
+        <type:ColorConverter x:Key="ColorConverter"/>
+    
     </Window.Resources>
     <Window.DataContext>
         <model:MainViewModel/>
     </Window.DataContext>
     <StackPanel>
-        
+
         <DataGrid AutoGenerateColumns="False" SelectedItem="{Binding SelectedPerson,Mode=TwoWay}" ItemsSource="{Binding Persons}" CanUserResizeColumns="False" CanUserResizeRows="False" Height="150" HorizontalAlignment="Center" Margin="47,30,46.6,0" Name="DataGridPerson" VerticalAlignment="Top" Width="400">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding YearStudy,Converter={StaticResource ColorConverter}}" Value="Student">
+                            <Setter Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Grade,Converter={StaticResource ColorConverter}}" Value="Teacher">
+                            <Setter Property="Foreground" Value="Blue"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Identifier}" Header="Identifier" Width="*"/>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="*"/>
                 <DataGridTextColumn Binding="{Binding Surname}" Header="Surname" Width="*"/>
-                <DataGridTextColumn  Header="Detail" Width="*">
+                <DataGridTextColumn  Header="Detail"  Width="*">
                     <DataGridTextColumn.Binding>
-                        <MultiBinding Converter="{StaticResource TypeConverter}">
-                            <Binding Path="YearStudy"/>
-                            <Binding Path="Grade"/>
-                        </MultiBinding>
-                    </DataGridTextColumn.Binding>
+                                <MultiBinding Converter="{StaticResource TypeConverter}">
+                                    <Binding Path="YearStudy"/>
+                                    <Binding Path="Grade"/>
+                                </MultiBinding>
+                            </DataGridTextColumn.Binding>
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>

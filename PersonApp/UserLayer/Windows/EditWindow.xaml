@@ -11,14 +11,14 @@
         mc:Ignorable="d"
         Title="EditWindow" Height="310" Width="240">
 
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <model:PersonViewModel/>
-    </Window.DataContext>
+    </Window.DataContext>-->
   
     <StackPanel Margin="10">
         <StackPanel Orientation="Horizontal">
             <Label Content="Type:"  />
-            <TextBox x:Name="txtType" Width="100"  Text="{Binding SelectedType,UpdateSourceTrigger=PropertyChanged}"  Height="20" Margin="53,10,0,0"/>
+            <TextBox x:Name="txtType" Width="100"  Text="{Binding SelectedType,UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding TypeField}"  Height="20" Margin="53,10,0,0"/>
 
         </StackPanel>
         <StackPanel Orientation="Horizontal">

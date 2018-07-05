@@ -13,3 +13,10 @@ C:\Users\ICI\Desktop\Person Application\DataLayer\obj\Debug\DataLayer.csproj.Cor
 C:\Users\ICI\Desktop\Person Application\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\ICI\Desktop\Person Application\DataLayer\obj\Debug\DataLayer.pdb
 C:\Users\ICI\Desktop\Person Application\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\DataLayer\bin\Debug\TransferLayer.dll
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\DataLayer\bin\Debug\TransferLayer.pdb
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\DataLayer\obj\Debug\DataLayer.pdb

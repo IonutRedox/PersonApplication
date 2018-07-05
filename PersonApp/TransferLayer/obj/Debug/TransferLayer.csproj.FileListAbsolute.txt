@@ -14,3 +14,9 @@ C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.cs
 C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.dll
 C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.pdb
 C:\Users\ICI\Desktop\Person Application\TransferLayer\obj\Debug\TransferLayer.csprojResolveAssemblyReference.cache
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\TransferLayer\bin\Debug\TransferLayer.dll
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\TransferLayer\bin\Debug\TransferLayer.pdb
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\TransferLayer\obj\Debug\TransferLayer.csprojResolveAssemblyReference.cache
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\TransferLayer\obj\Debug\TransferLayer.csproj.CoreCompileInputs.cache
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\TransferLayer\obj\Debug\TransferLayer.dll
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\TransferLayer\obj\Debug\TransferLayer.pdb

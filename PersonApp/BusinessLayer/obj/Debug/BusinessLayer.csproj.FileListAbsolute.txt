@@ -8,3 +8,22 @@ C:\Users\ICI\Desktop\Person Application\BusinessLayer\bin\Debug\DataLayer.dll
 C:\Users\ICI\Desktop\Person Application\BusinessLayer\bin\Debug\TransferLayer.dll
 C:\Users\ICI\Desktop\Person Application\BusinessLayer\bin\Debug\DataLayer.pdb
 C:\Users\ICI\Desktop\Person Application\BusinessLayer\bin\Debug\TransferLayer.pdb
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\TransferLayer.dll
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\TransferLayer.pdb
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\ICI\Desktop\PersonApplication-master\PersonApp\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\TransferLayer.dll
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\bin\Debug\TransferLayer.pdb
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Redox\Desktop\PersonApplication-master\PersonApp\BusinessLayer\obj\Debug\BusinessLayer.pdb

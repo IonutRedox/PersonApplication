@@ -17,13 +17,35 @@ namespace UserLayer.ViewModels
 {
     public class PersonViewModel : INotifyPropertyChanged 
     {
-     
-        public PersonViewModel()
+        public PersonViewModel( Person TransferPerson)
         {
-    
+            if (TransferPerson != null)
+            {
+                Name = TransferPerson.Name;
+                Surname = TransferPerson.Surname;
+                Identifier = TransferPerson.Identifier;
+                if (TransferPerson is Student)
+                {
+                    SelectedType = "Student";
+                    YearStudy = (TransferPerson as Student).YearStudy;
+                }
+                else
+                {
+                    SelectedType = "Teacher";
+                    Grade = (TransferPerson as Teacher).Grade;
+                }
+            }
+            ModifiedStudent = new Student();
+            ModifiedTeacher = new Teacher();
+            TypeField = string.IsNullOrEmpty(Name) ? true : false;
             _saveCommand = new RelayCommand(()=>ExecuteSave(), ()=>CanExecuteSave());
+          
         }
-       
+
+        #region Fields - Properties
+        public static Student ModifiedStudent = new Student();
+        public static Teacher ModifiedTeacher = new Teacher();
+        public bool TypeField { get; set; }
         private string[] _types = { "Student", "Teacher" };
         public string[] Types
         {
@@ -64,23 +86,29 @@ namespace UserLayer.ViewModels
         {
             get { return _saveCommand; }
         }
+        #endregion
 
+
+        #region Command - Validation - Methods
         public void ExecuteSave()
         {
-            DialogResult = true;
-            Student student = new Student(Name,Surname,Identifier);
-            Teacher teacher = new Teacher(Name,Surname,Identifier);
             if(SelectedType=="Student")
-            { 
-                student.YearStudy = YearStudy;
-                MainViewModel.SaveChanges(student);
+            {
+                ModifiedStudent.Name = Name;
+                ModifiedStudent.Surname = Surname;
+                ModifiedStudent.Identifier = Identifier;
+                ModifiedStudent.YearStudy = YearStudy;
             }
             else
             {
-                teacher.Grade = Grade;
-                MainViewModel.SaveChanges(teacher);
+                ModifiedTeacher.Name = Name;
+                ModifiedTeacher.Surname = Surname;
+                ModifiedTeacher.Identifier = Identifier;
+                ModifiedTeacher.Grade = Grade;
             }
-            
+           
+            DialogResult = true;
+         
         }
         private bool CanExecuteSave()
         {
@@ -111,7 +139,10 @@ namespace UserLayer.ViewModels
             }
             return false;
         }
+        #endregion
 
+   
+        #region NotifyChanges
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
         {
@@ -119,6 +150,7 @@ namespace UserLayer.ViewModels
                 PropertyChanged(this,
                     new System.ComponentModel.PropertyChangedEventArgs(propertyName));
         }
+        #endregion
     }
 
 }

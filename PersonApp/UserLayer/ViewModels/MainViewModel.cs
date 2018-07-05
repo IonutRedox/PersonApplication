@@ -14,8 +14,9 @@ using UserLayer.Helper;
 
 namespace UserLayer.ViewModels
 {
-    public class MainViewModel: INotifyPropertyChanged 
+    public class MainViewModel: INotifyPropertyChanged
     {
+        
         public MainViewModel()
         { 
             Persons = new ObservableCollection<Person>(PersonManage.GetPersons());
@@ -24,8 +25,10 @@ namespace UserLayer.ViewModels
             _deleteCommand = new RelayCommand(DeleteCommand_Execute, Command_CanExecute);
             _searchCommand = new RelayCommand(SearchCommand_Execute, Search_CanExecute);
         }
-
+        #region Fields - Properties
         public string SearchedPerson { get; set; }
+        private Person _transferPerson;
+        public Person TransferPerson { get; set; }
         private Person _selectedPerson;
         public Person SelectedPerson
         {
@@ -41,18 +44,16 @@ namespace UserLayer.ViewModels
         }
         public static bool IsFocused { get; set; }
         private static ObservableCollection<Person> _persons = new ObservableCollection<Person>();
-         public static ObservableCollection<Person> Persons
+        public static ObservableCollection<Person> Persons
         {
             get { return _persons; }
             set { _persons = value; }
         }
-        PersonManager PersonManage = new PersonManager();
-      
+        public static PersonManager PersonManage = new PersonManager();
         private ICommand _editCommand;
         private ICommand _addCommand;
         private ICommand _deleteCommand;
         private ICommand _searchCommand;
-
         public ICommand SearchCommand
         {
             get { return _searchCommand; }
@@ -69,7 +70,8 @@ namespace UserLayer.ViewModels
         {
             get { return _deleteCommand; }
         }
-
+        #endregion
+        #region Command methods
         public void DeleteCommand_Execute()
         {
             Persons.Remove(SelectedPerson);
@@ -86,25 +88,37 @@ namespace UserLayer.ViewModels
         }
         public void EditWindow_Execute()
         {
-
-            Windows.EditWindow editWindow = new Windows.EditWindow()
+            TransferPerson = SelectedPerson;
+            Windows.EditWindow editWindow = new Windows.EditWindow();
+            editWindow.DataContext = new PersonViewModel(TransferPerson);
+            if(editWindow.ShowDialog()==true)
             {
-                DataContext = new PersonViewModel()
+                if (string.IsNullOrEmpty(PersonViewModel.ModifiedStudent.Name) == false)
                 {
-                    Name = SelectedPerson.Name,
-                    Surname = SelectedPerson.Surname,
-                    Identifier = SelectedPerson.Identifier,
-                    SelectedType=SelectedPerson.GetType().ToString().Substring(14),
-                    YearStudy = SelectedPerson is Student ? (SelectedPerson as Student).YearStudy : 0,
-                    Grade = SelectedPerson is Teacher ? (SelectedPerson as Teacher).Grade : string.Empty
+                    SaveChanges(PersonViewModel.ModifiedStudent);
                 }
-            };
-            editWindow.ShowDialog();
+                else
+                {
+                    SaveChanges(PersonViewModel.ModifiedTeacher);
+                }
+            }
         }
         public void AddWindow_Execute()
         {
+            TransferPerson = null;
             Windows.EditWindow addWindow = new Windows.EditWindow();
-            addWindow.ShowDialog();
+            addWindow.DataContext = new PersonViewModel(TransferPerson);
+            if (addWindow.ShowDialog() == true)
+            {
+                if (string.IsNullOrEmpty(PersonViewModel.ModifiedStudent.Name)==false)
+                {
+                    SaveChanges(PersonViewModel.ModifiedStudent);
+                }
+                else
+                {
+                    SaveChanges(PersonViewModel.ModifiedTeacher);
+                }
+            }
         }
         public void SearchCommand_Execute()
         {
@@ -127,6 +141,8 @@ namespace UserLayer.ViewModels
         {
             return true;
         }
+        #endregion
+
         public static void SaveChanges(Person received)
         {
             bool found = false;
@@ -143,11 +159,11 @@ namespace UserLayer.ViewModels
             {
                 Persons.Add(received);
             }
-                
             
+            PersonManage.SaveList(new List<Person>(Persons));
         }
 
-
+        #region NotifyChanges
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyRaised(string propertyname)
         {
@@ -156,6 +172,7 @@ namespace UserLayer.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
         }
+        #endregion
 
     }
 }
